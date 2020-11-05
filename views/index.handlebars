@@ -3,32 +3,38 @@
 
   <div class="form-group">
     <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+    <br>
+    <input type="text"class= "form-control" id="ca" name="name">
   </div>
 
-  <button type="submit">Add Burger Order</button>
+  <button type="submit" class="btn btn-primary">Add Burger Order</button>
 </form>
-
+<br>
 <h1>Burger order!</h1>
+<div class="row">
+  <div class="non-consumed col">
+    <h2>Burgers not consumed</h2>
 
-<h2>Burgers not consumed</h2>
+    <ul>
+      {{#each burgers}}
+        {{#unless devoured}}
+          {{> burgers/burger-block devoured=true}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="consumed col">
+    <h2>Burgers consumed</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+    <ul>
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burgers/burger-block2 devoured=false}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
 
-<h2>Burgers consumed</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul>
 
 
