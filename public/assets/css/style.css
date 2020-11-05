@@ -1,9 +1,24 @@
+.burgerord{
+  display: flex;
+}
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: beige;
 }
-
+.row{
+  background-color: wheat;
+}
+img{
+  position: relative;
+  margin-left: 40px;
+  width: 200px;
+  height: 200px
+}
+.burgername{
+  width: 25%;
+  height: 100%;
+}
 .label {
   font-weight: bold;
 }
@@ -16,4 +31,25 @@ li {
 
 .form-group {
   margin-bottom: 5px;
+}
+.hide {
+  display: none;
+}
+.submit{
+  color: aliceblue;
+  background-color: dodgerblue;
+  border: white;
+}
+.create-form{
+  justify-content: center;
+}
+.change-devouer{
+  position: relative;
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color: darkgoldenrod;
+  color: brown;
+  border: darkmagenta;
+  height: 200px;
+  width: 120px;
 }
